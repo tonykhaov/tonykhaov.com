@@ -1,0 +1,5 @@
+.test {
+  .jean {
+    @apply bg-red-200;
+  }
+}
