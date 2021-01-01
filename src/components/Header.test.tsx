@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from 'src/test/app-test-utils'
 import Header from 'src/components/Header'
 
 test('renders hello world title', () => {
