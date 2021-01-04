@@ -12,11 +12,11 @@ export default function Home({ posts }: Props): JSX.Element {
     <>
       <Header />
       <main className="bg-cyan-50">
-        <div className="container h-full p-4 mx-auto">
+        <div className="container h-full py-6 pl-4 pr-2 mx-auto">
           <h1 className="text-2xl font-semibold">Recent blog posts</h1>
-          <ul className="my-6">
+          <ul className="my-5">
             {posts.map((post) => (
-              <li key={post.title} className="mb-6">
+              <li key={post.title} className="mb-5">
                 <Link href={`posts/${post.id}`}>
                   <h2 className="text-xl cursor-pointer hover:text-blue-700">
                     <a>{post.title}</a>
