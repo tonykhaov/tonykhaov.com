@@ -5,6 +5,7 @@ function buildPost(): Post {
   return {
     title: faker.lorem.words(),
     content: faker.lorem.paragraph(),
+    id: String(faker.random.uuid()),
   }
 }
 
