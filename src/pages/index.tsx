@@ -18,13 +18,18 @@ export default function Home({ posts }: Props): JSX.Element {
             {posts.map((post) => (
               <li key={post.title} className="mb-5">
                 <Link href={`posts/${post.id}`}>
-                  <h2 className="text-xl cursor-pointer hover:text-blue-700">
-                    <a>{post.title}</a>
-                  </h2>
+                  <a aria-label={post.title}>
+                    <h2 className="text-xl hover:text-blue-700">{post.title}</h2>
+                  </a>
                 </Link>
                 <p className="mt-2 mb-1 text-lg italic text-gray-500 truncate">{post.content}</p>
                 <Link href={`posts/${post.id}`}>
-                  <a className="text-lg text-blue-800 hover:text-blue-700">Read more &#8594;</a>
+                  <a
+                    aria-label={`Read more ${post.title}`}
+                    className="text-lg text-blue-800 hover:text-blue-700"
+                  >
+                    Read more &#8594;
+                  </a>
                 </Link>
               </li>
             ))}
