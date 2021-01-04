@@ -16,9 +16,9 @@ export default function Home({ posts }: Props): JSX.Element {
             {posts.map((post) => (
               <li key={post.title} className="mb-6">
                 <Link href="/">
-                  <h1 className="text-xl cursor-pointer hover:text-blue-700">
+                  <h2 className="text-xl cursor-pointer hover:text-blue-700">
                     <a>{post.title}</a>
-                  </h1>
+                  </h2>
                 </Link>
                 <p className="mt-2 mb-1 text-lg italic text-gray-500 truncate">{post.content}</p>
                 <Link href="/">
