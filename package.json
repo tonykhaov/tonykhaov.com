@@ -45,6 +45,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "faker": "^5.1.0",
     "git-cz": "^4.7.6",
     "husky": "^4.3.6",
     "identity-obj-proxy": "^3.0.0",
