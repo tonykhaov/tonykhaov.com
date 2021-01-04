@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Header: React.FC = () => {
   return (
-    <header className="h-16 bg-gray-300">
+    <header className="sticky inset-0 h-16 bg-gray-300">
       <div className="container flex items-center justify-between h-full mx-auto">
         <div className="flex items-center">
           {/* @TODO replace span by real image */}
