@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Header from 'src/components/Header'
+import Header from 'src/components/screens/Header'
 import { Post } from 'src/models/post'
 import { buildPost } from 'src/test/generate'
 

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { FiSun } from 'react-icons/fi'
-import { FaMoon } from 'react-icons/fa'
+// import { FaMoon } from 'react-icons/fa'
+import CustomLink from 'src/components/atoms/CustomLink'
 
 const Header: React.FC = () => {
   return (
@@ -23,23 +24,22 @@ const Header: React.FC = () => {
           </div>
         </div>
         <nav>
-          <ul className="flex">
-            <li className="px-2">
+          <ul className="flex items-center">
+            <li className="mx-1">
               <Link href="/">
-                <a>Blog</a>
+                <CustomLink className="block p-2">Blog</CustomLink>
               </Link>
             </li>
-            <li className="px-2">
+            <li className="mx-1">
               <Link href="/">
-                <a>About</a>
+                <CustomLink className="block p-2">About</CustomLink>
               </Link>
             </li>
-            <li className="flex items-center px-2 cursor-pointer">
-              {Math.random() < 0.5 ? (
-                <FiSun aria-label="toggle light-mode" />
-              ) : (
-                <FaMoon aria-label="toggle dark-mode" />
-              )}
+            <li className="mx-1 border border-black rounded">
+              <CustomLink className="block p-3" aria-label="toggle">
+                <FiSun aria-label="light-mode on" />
+                {/* <FaMoon aria-label="dark-mode on" /> */}
+              </CustomLink>
             </li>
           </ul>
         </nav>

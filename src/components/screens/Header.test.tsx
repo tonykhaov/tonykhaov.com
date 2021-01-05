@@ -1,5 +1,5 @@
 import { render, screen } from 'src/test/app-test-utils'
-import Header from 'src/components/Header'
+import Header from 'src/components/screens/Header'
 
 test('renders tony khaov title and nav links', () => {
   render(<Header />)
