@@ -12,7 +12,7 @@ export default function Home({ posts }: Props): JSX.Element {
     <>
       <Header />
       <main className="bg-cyan-50">
-        <div className="container h-full py-6 pl-4 pr-2 mx-auto">
+        <div className="container h-full px-4 py-6 mx-auto">
           <h1 className="text-2xl font-semibold">Recent blog posts</h1>
           <ul className="my-5">
             {posts.map((post) => (
@@ -41,18 +41,7 @@ export default function Home({ posts }: Props): JSX.Element {
 }
 
 export async function getServerSideProps(): Promise<{ props: { posts: Post[] } }> {
-  const posts: Post[] = [
-    buildPost(),
-    buildPost(),
-    buildPost(),
-    buildPost(),
-    buildPost(),
-    buildPost(),
-    buildPost(),
-    buildPost(),
-    buildPost(),
-    buildPost(),
-  ]
+  const posts: Post[] = [buildPost(), buildPost(), buildPost(), buildPost(), buildPost()]
 
   return {
     props: {

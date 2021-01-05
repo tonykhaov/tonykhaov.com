@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { FiSun } from 'react-icons/fi'
+import { FaMoon } from 'react-icons/fa'
 
 const Header: React.FC = () => {
   return (
@@ -31,6 +33,13 @@ const Header: React.FC = () => {
               <Link href="/">
                 <a>About</a>
               </Link>
+            </li>
+            <li className="flex items-center px-2 cursor-pointer">
+              {Math.random() < 0.5 ? (
+                <FiSun aria-label="toggle light-mode" />
+              ) : (
+                <FaMoon aria-label="toggle dark-mode" />
+              )}
             </li>
           </ul>
         </nav>
