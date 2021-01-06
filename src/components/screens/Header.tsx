@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FiSun } from 'react-icons/fi'
 // import { FaMoon } from 'react-icons/fa'
-import CustomLink from 'src/components/atoms/CustomLink'
+import LinkAria from 'src/components/atoms/LinkAria'
 
 const Header: React.FC = () => {
   return (
@@ -27,19 +27,19 @@ const Header: React.FC = () => {
           <ul className="flex items-center">
             <li className="mx-1">
               <Link href="/">
-                <CustomLink className="block p-2">Blog</CustomLink>
+                <LinkAria className="block p-2">Blog</LinkAria>
               </Link>
             </li>
             <li className="mx-1">
               <Link href="/">
-                <CustomLink className="block p-2">About</CustomLink>
+                <LinkAria className="block p-2">About</LinkAria>
               </Link>
             </li>
             <li className="mx-1 border border-black rounded">
-              <CustomLink className="block p-3" aria-label="toggle">
+              <LinkAria className="block p-3" aria-label="toggle">
                 <FiSun aria-label="light-mode on" />
                 {/* <FaMoon aria-label="dark-mode on" /> */}
-              </CustomLink>
+              </LinkAria>
             </li>
           </ul>
         </nav>

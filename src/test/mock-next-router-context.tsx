@@ -1,6 +1,6 @@
 import { RouterContext } from 'next/dist/next-server/lib/router-context'
 
-const routerMock = {
+const nextRouterConfig = {
   basePath: '',
   pathname: '/',
   route: '/',
@@ -21,7 +21,8 @@ const routerMock = {
 }
 
 const NextRouterContext: React.FC = ({ children }) => {
-  return <RouterContext.Provider value={routerMock}>{children}</RouterContext.Provider>
+  return <RouterContext.Provider value={nextRouterConfig}>{children}</RouterContext.Provider>
 }
 
+export { nextRouterConfig }
 export default NextRouterContext

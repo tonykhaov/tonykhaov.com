@@ -1,7 +1,8 @@
+/* eslint-disable react/display-name */
 import * as React from 'react'
 import clsx from 'clsx'
 
-export interface CustomLinkProps
+export interface LinkAriaProps
   extends Omit<React.LinkHTMLAttributes<HTMLAnchorElement>, 'onClick'> {
   Component?: React.ElementType<any>
   onClick?: (e?: Event) => void
@@ -9,7 +10,7 @@ export interface CustomLinkProps
   className?: string
 }
 
-const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
+const LinkAria = React.forwardRef<HTMLAnchorElement, LinkAriaProps>(
   (
     { Component = 'a', onClick, className, role = 'link', tabIndex = 0, ...props },
     forwardedRef
@@ -28,6 +29,4 @@ const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
   }
 )
 
-CustomLink.displayName = 'CustomLink'
-
-export default CustomLink
+export default LinkAria
