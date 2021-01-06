@@ -22,13 +22,15 @@ export default function Home({ posts }: Props): JSX.Element {
                     <h2 className="text-xl hover:text-blue-700">{post.title}</h2>
                   </a>
                 </Link>
-                <p className="mt-2 mb-1 text-lg italic text-gray-500 truncate">{post.content}</p>
+                <p className="mt-2 mb-1 text-lg italic text-gray-500 line-clamp-2">
+                  {post.content}
+                </p>
                 <Link href={`posts/${post.id}`}>
                   <a
                     aria-label={`Read more ${post.title}`}
                     className="text-lg text-blue-800 hover:text-blue-700"
                   >
-                    Read more &#8594;
+                    Read more →
                   </a>
                 </Link>
               </li>

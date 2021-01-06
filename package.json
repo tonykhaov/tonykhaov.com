@@ -17,6 +17,7 @@
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "@tailwindcss/line-clamp": "^0.1.0",
     "autoprefixer": "^10.1.0",
     "clsx": "^1.1.1",
     "next": "10.0.4",
