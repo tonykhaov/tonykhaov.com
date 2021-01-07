@@ -11,7 +11,7 @@ export default function Home({ posts }: Props): JSX.Element {
   return (
     <>
       <Header />
-      <main className="bg-cyan-50">
+      <main>
         <div className="container h-full px-4 py-6 mx-auto">
           <h1 className="text-2xl font-semibold">Recent blog posts</h1>
           <ul className="my-5">
