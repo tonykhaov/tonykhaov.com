@@ -10,33 +10,41 @@ const Header: React.FC = () => {
         <div className="flex items-center">
           {/* @TODO replace span by real image */}
           <Link href="/">
-            <a className="flex items-center mx-2">
-              <span className="inline-block w-8 h-8 rounded-full bg-gradient-to-r from-green-400 to-lime-600" />
-            </a>
+            <LinkAria
+              Component="span"
+              className="flex items-center w-8 h-8 mr-2 rounded-full bg-gradient-to-r from-green-400 to-lime-600 focus:outline-none focus:ring focus:ring-blue-400"
+            />
           </Link>
-          <div className="flex flex-col">
-            <h1 className="text-xl font-semibold">
-              <Link href="/">
-                <a>Tony Khaov</a>
-              </Link>
-            </h1>
-            <h2 className="w-max">Front-End Developer</h2>
-          </div>
+          <Link href="/">
+            <LinkAria
+              Component="h1"
+              className="text-2xl font-bold rounded focus:outline-none focus:ring focus:ring-blue-400 w-max"
+            >
+              Tony Khaov
+            </LinkAria>
+          </Link>
         </div>
         <nav>
           <ul className="flex items-center">
             <li className="mx-1">
               <Link href="/">
-                <LinkAria className="block p-2">Blog</LinkAria>
+                <LinkAria className="block p-2 rounded focus:outline-none focus:ring focus:ring-blue-400">
+                  Blog
+                </LinkAria>
               </Link>
             </li>
             <li className="mx-1">
               <Link href="/">
-                <LinkAria className="block p-2">About</LinkAria>
+                <LinkAria className="block p-2 rounded focus:outline-none focus:ring focus:ring-blue-400">
+                  About
+                </LinkAria>
               </Link>
             </li>
             <li className="mx-1 border border-black rounded">
-              <LinkAria className="block p-3" aria-label="toggle">
+              <LinkAria
+                className="block p-3 rounded focus:outline-none focus:ring focus:ring-blue-400"
+                aria-label="toggle mode"
+              >
                 <FiSun aria-label="light-mode on" />
                 {/* <FaMoon aria-label="dark-mode on" /> */}
               </LinkAria>

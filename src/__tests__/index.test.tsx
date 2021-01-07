@@ -8,11 +8,11 @@ describe('Homepage', () => {
 
     render(<Home posts={posts} />)
 
-    expect(screen.getByRole('heading', { level: 2, name: posts[0].title })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: posts[0].title })).toBeInTheDocument()
     expect(screen.getByText(posts[0].content)).toBeInTheDocument()
     expect(screen.getByLabelText(`Read more ${posts[0].title}`)).toBeInTheDocument()
 
-    expect(screen.getByRole('heading', { level: 2, name: posts[1].title })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: posts[1].title })).toBeInTheDocument()
     expect(screen.getByText(posts[1].content)).toBeInTheDocument()
     expect(screen.getByLabelText(`Read more ${posts[1].title}`)).toBeInTheDocument()
   })
@@ -22,10 +22,7 @@ describe('Homepage', () => {
 
     render(<Home posts={posts} />)
 
-    // Post title is wrapped by a link tag
-    expect(screen.getByRole('heading', { level: 2, name: posts[0].title }).parentElement).toEqual(
-      screen.getByLabelText(posts[0].title)
-    )
+    expect(screen.getByRole('link', { name: posts[0].title }))
 
     // Post title link tag is a11y friendly for screen readers
     expect(screen.getByLabelText(posts[0].title)).toHaveAttribute('aria-label', posts[0].title)

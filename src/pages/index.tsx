@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import LinkAria from 'src/components/atoms/LinkAria'
 import Header from 'src/components/screens/Header'
 import { Post } from 'src/models/post'
 import { buildPost } from 'src/test/generate'
@@ -18,20 +19,24 @@ export default function Home({ posts }: Props): JSX.Element {
             {posts.map((post) => (
               <li key={post.title} className="mb-5">
                 <Link href={`posts/${post.id}`}>
-                  <a aria-label={post.title}>
-                    <h2 className="text-xl hover:text-blue-700">{post.title}</h2>
-                  </a>
+                  <LinkAria
+                    Component="h2"
+                    className="text-xl rounded hover:text-blue-700 focus:outline-none focus:ring focus:ring-blue-400"
+                    aria-label={post.title}
+                  >
+                    {post.title}
+                  </LinkAria>
                 </Link>
                 <p className="mt-2 mb-1 text-lg italic text-gray-500 line-clamp-2">
                   {post.content}
                 </p>
                 <Link href={`posts/${post.id}`}>
-                  <a
+                  <LinkAria
                     aria-label={`Read more ${post.title}`}
-                    className="text-lg text-blue-800 hover:text-blue-700"
+                    className="text-lg text-blue-800 rounded hover:text-blue-700 focus:outline-none focus:ring focus:ring-blue-400"
                   >
                     Read more →
-                  </a>
+                  </LinkAria>
                 </Link>
               </li>
             ))}
