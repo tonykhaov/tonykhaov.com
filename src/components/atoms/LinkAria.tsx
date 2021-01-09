@@ -14,7 +14,7 @@ const LinkAria = React.forwardRef<HTMLAnchorElement, LinkAriaProps>(
   ({ Component = 'a', onClick, className, role = 'link', tabIndex = 0, ...props }, ref) => {
     return (
       <Component
-        className={clsx(className, 'cursor-pointer')}
+        className={clsx(className, 'cursor-pointer select-none')}
         role={role}
         tabIndex={tabIndex}
         onClick={onClick}
