@@ -11,18 +11,15 @@ export interface LinkAriaProps
 }
 
 const LinkAria = React.forwardRef<HTMLAnchorElement, LinkAriaProps>(
-  (
-    { Component = 'a', onClick, className, role = 'link', tabIndex = 0, ...props },
-    forwardedRef
-  ) => {
+  ({ Component = 'a', onClick, className, role = 'link', tabIndex = 0, ...props }, ref) => {
     return (
       <Component
-        className={clsx(className, 'cursor-pointer')}
+        className={clsx(className, 'cursor-pointer select-none')}
         role={role}
         tabIndex={tabIndex}
         onClick={onClick}
         onKeyDown={(e: KeyboardEvent) => e.key === 'Enter' && onClick(e)}
-        ref={forwardedRef}
+        ref={ref}
         {...props}
       />
     )
