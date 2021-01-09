@@ -21,19 +21,19 @@ export default function Home({ posts }: Props): JSX.Element {
                 <Link href={`posts/${post.id}`}>
                   <LinkAria
                     Component="h2"
-                    className="text-xl rounded hover:text-blue-700 focus:outline-none focus:ring focus:ring-blue-400"
+                    className="inline-block text-xl rounded hover:text-blue-700 dark:hover:text-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
                     aria-label={post.title}
                   >
                     {post.title}
                   </LinkAria>
                 </Link>
-                <p className="mt-2 mb-1 text-lg italic text-gray-500 line-clamp-2">
+                <p className="mt-2 mb-1 text-lg italic text-gray-500 dark:text-gray-400 line-clamp-2">
                   {post.content}
                 </p>
                 <Link href={`posts/${post.id}`}>
                   <LinkAria
                     aria-label={`Read more ${post.title}`}
-                    className="text-lg text-blue-800 rounded hover:text-blue-700 focus:outline-none focus:ring focus:ring-blue-400"
+                    className="text-lg text-blue-800 rounded dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
                   >
                     Read more →
                   </LinkAria>
