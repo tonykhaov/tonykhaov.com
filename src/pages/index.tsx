@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import LinkAria from 'src/components/atoms/LinkAria'
-import Header from 'src/components/screens/Header'
+import { Header, Footer } from 'src/components/screens'
 import { Post } from 'src/models/post'
 import { buildPost } from 'src/test/generate'
 
@@ -43,6 +43,7 @@ export default function Home({ posts }: Props): JSX.Element {
           </ul>
         </div>
       </main>
+      <Footer />
     </>
   )
 }

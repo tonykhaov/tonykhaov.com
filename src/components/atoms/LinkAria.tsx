@@ -8,6 +8,7 @@ export interface LinkAriaProps
   onClick?: (e?: Event) => void
   role?: string
   className?: string
+  target?: string
 }
 
 const LinkAria = React.forwardRef<HTMLAnchorElement, LinkAriaProps>(
