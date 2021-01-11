@@ -47,7 +47,7 @@ export default function Home({ posts }: Props): JSX.Element {
   )
 }
 
-export async function getServerSideProps(): Promise<{ props: { posts: Post[] } }> {
+export async function getStaticProps() {
   const posts: Post[] = [buildPost(), buildPost(), buildPost(), buildPost(), buildPost()]
 
   return {
