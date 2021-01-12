@@ -2,13 +2,13 @@ import { FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa'
 import LinkAria from 'src/components/atoms/LinkAria'
 
 const Footer: React.FC = () => (
-  <footer className="flex justify-center">
+  <footer className="flex justify-center pb-5">
     <LinkAria
       aria-label="instagram"
       href="/"
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-block mr-4 rounded focus:outline-none focus:ring focus:ring-blue-400"
+      className="inline-block mr-4 text-red-500 rounded focus:outline-none focus:ring focus:ring-blue-400"
     >
       <FaInstagram className="w-8 h-8" />
     </LinkAria>
