@@ -51,7 +51,7 @@ describe('LinkAria test', () => {
     expect(linkAria.tagName.toLowerCase()).toBe(fakeComponentType)
     expect(linkAria).toHaveAttribute('tabIndex', fakeTabIndex + '')
     expect(linkAria).toHaveAttribute('role', fakeRole)
-    expect(linkAria.className).toMatchInlineSnapshot(`"FAKE_CLASSNAME cursor-pointer select-none"`)
+    expect(linkAria.className).toMatchInlineSnapshot(`"FAKE_CLASSNAME cursor-pointer"`)
   })
 
   it('should redirect when wrapped inside a Link from next/link', () => {
