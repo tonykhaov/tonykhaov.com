@@ -42,7 +42,7 @@ const Header: React.FC = () => {
               </Link>
             </li>
             <li className="mx-1">
-              <Link href="/">
+              <Link href="/about">
                 <LinkAria className="block p-1 rounded hover:text-gray-600 dark:hover:text-gray-200 focus:outline-none focus:ring focus:ring-blue-400">
                   About
                 </LinkAria>
