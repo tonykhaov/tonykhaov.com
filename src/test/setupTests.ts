@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom/extend-expect'
+import '@testing-library/jest-dom'
 import { server } from 'src/test/server/mock-server'
 
 const spyScrollTo = jest.fn()
