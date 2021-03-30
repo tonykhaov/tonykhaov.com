@@ -1,6 +1,7 @@
 import { RouterContext } from 'next/dist/next-server/lib/router-context'
 
 const nextRouterConfig = {
+  isLocaleDomain: true,
   basePath: '',
   pathname: '/',
   route: '/',
@@ -18,6 +19,8 @@ const nextRouterConfig = {
     emit: jest.fn(),
   },
   isFallback: false,
+  isReady: true,
+  isPreview: false,
 }
 
 const NextRouterContext: React.FC = ({ children }) => {
