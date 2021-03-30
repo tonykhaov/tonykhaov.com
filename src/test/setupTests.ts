@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom'
 
-const spyScrollTo = jest.fn()
 const spyMatchMedia = jest.fn().mockImplementation((query) => ({
   matches: false,
   media: query,
@@ -13,7 +12,6 @@ const spyMatchMedia = jest.fn().mockImplementation((query) => ({
 }))
 
 beforeAll(() => {
-  Object.defineProperty(window, 'scrollTo', { value: spyScrollTo })
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: spyMatchMedia,
@@ -21,8 +19,5 @@ beforeAll(() => {
 })
 
 afterEach(() => {
-  spyScrollTo.mockClear()
   spyMatchMedia.mockClear()
 })
-
-export { spyScrollTo, spyMatchMedia }

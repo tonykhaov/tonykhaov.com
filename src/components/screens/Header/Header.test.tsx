@@ -1,7 +1,6 @@
 import { render, screen } from 'src/test/app-test-utils'
 import Header from 'src/components/screens/Header'
 import userEvent from '@testing-library/user-event'
-import { spyMatchMedia } from 'src/test/setupTests'
 
 describe('Header', () => {
   it('should render Header with tony khaov title and nav links', () => {
@@ -19,13 +18,12 @@ describe('Header', () => {
     render(<Header />)
 
     const toggleThemeBtn = screen.getByLabelText(/toggle theme/i)
-    const beforeMatchMediaCallsLength = spyMatchMedia.mock.calls.length
+    const htmlTag = document.firstElementChild
 
+    expect(htmlTag).toHaveClass('light')
     userEvent.click(toggleThemeBtn)
+    expect(htmlTag).toHaveClass('dark')
     userEvent.click(toggleThemeBtn)
-    userEvent.click(toggleThemeBtn)
-
-    const afterMatchMediaCallsLength = spyMatchMedia.mock.calls.length
-    expect(afterMatchMediaCallsLength).toBe(beforeMatchMediaCallsLength + 3)
+    expect(htmlTag).toHaveClass('light')
   })
 })
