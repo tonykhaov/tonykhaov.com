@@ -1,0 +1,133 @@
+{
+  "version": "aa2c1d09",
+  "entry": {
+    "module": "/build/entry.client-Q4JOBQDO.js",
+    "imports": [
+      "/build/_shared/chunk-C5CQQXRA.js",
+      "/build/_shared/chunk-E7VMOUYL.js"
+    ]
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "module": "/build/root-7XN3SEBY.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": true,
+      "hasErrorBoundary": true
+    },
+    "routes/about": {
+      "id": "routes/about",
+      "parentId": "root",
+      "path": "about",
+      "module": "/build/routes/about-OGTFWT3V.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/cours/index": {
+      "id": "routes/cours/index",
+      "parentId": "root",
+      "path": "cours",
+      "index": true,
+      "module": "/build/routes/cours/index-ILM4UT4U.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/demos/about": {
+      "id": "routes/demos/about",
+      "parentId": "root",
+      "path": "demos/about",
+      "module": "/build/routes/demos/about-WYPYFEAK.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/demos/about/index": {
+      "id": "routes/demos/about/index",
+      "parentId": "routes/demos/about",
+      "index": true,
+      "module": "/build/routes/demos/about/index-OH2EDS77.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/demos/about/whoa": {
+      "id": "routes/demos/about/whoa",
+      "parentId": "routes/demos/about",
+      "path": "whoa",
+      "module": "/build/routes/demos/about/whoa-HIBQ3ERV.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/demos/actions": {
+      "id": "routes/demos/actions",
+      "parentId": "root",
+      "path": "demos/actions",
+      "module": "/build/routes/demos/actions-NU6ADUVM.js",
+      "hasAction": true,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/demos/correct": {
+      "id": "routes/demos/correct",
+      "parentId": "root",
+      "path": "demos/correct",
+      "module": "/build/routes/demos/correct-2MZCGB2M.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/demos/params": {
+      "id": "routes/demos/params",
+      "parentId": "root",
+      "path": "demos/params",
+      "module": "/build/routes/demos/params-YUXOKQIZ.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/demos/params/$id": {
+      "id": "routes/demos/params/$id",
+      "parentId": "routes/demos/params",
+      "path": ":id",
+      "module": "/build/routes/demos/params/$id-EFN3SP3W.js",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasCatchBoundary": true,
+      "hasErrorBoundary": true
+    },
+    "routes/demos/params/index": {
+      "id": "routes/demos/params/index",
+      "parentId": "routes/demos/params",
+      "index": true,
+      "module": "/build/routes/demos/params/index-CGKH46XT.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/index": {
+      "id": "routes/index",
+      "parentId": "root",
+      "index": true,
+      "module": "/build/routes/index-4OOMSKLN.js",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    }
+  },
+  "url": "/build/manifest-AA2C1D09.js"
+}

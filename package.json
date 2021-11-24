@@ -1,71 +1,30 @@
 {
-  "name": "tonykhaov.com",
-  "version": "0.1.0",
   "private": true,
+  "name": "remix-app-template",
+  "description": "",
+  "license": "",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "lint": "eslint --ext js,jsx,ts,tsx --fix",
-    "prettier": "prettier --write '**/*.ts?(x)'",
-    "test": "jest --runInBand",
-    "test:watch": "jest --runInBand --watch"
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node"
   },
   "dependencies": {
-    "@tailwindcss/line-clamp": "^0.2.0",
-    "autoprefixer": "^10.2.5",
-    "clsx": "^1.1.1",
-    "next": "10.1.2",
-    "next-themes": "^0.0.14",
-    "postcss": "^8.2.9",
-    "postcss-nested": "^5.0.5",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.2.0",
-    "tailwindcss": "^2.0.4"
+    "@remix-run/react": "^1.0.5",
+    "@remix-run/vercel": "^1.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "remix": "^1.0.5"
   },
   "devDependencies": {
-    "@tailwindcss/jit": "^0.1.17",
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^13.1.1",
-    "@types/faker": "^5.5.0",
-    "@types/jest": "^26.0.22",
-    "@types/node": "^14.14.37",
-    "@types/react": "^17.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.20.0",
-    "@typescript-eslint/parser": "^4.20.0",
-    "babel-jest": "^26.6.3",
-    "commitizen": "^4.2.3",
-    "cz-conventional-changelog": "3.3.0",
-    "eslint": "^7.23.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.23.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "faker": "^5.5.2",
-    "git-cz": "^4.7.6",
-    "husky": "^4.3.6",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.6.3",
-    "jest-watch-typeahead": "^0.6.1",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1",
-    "ts-jest": "^26.5.4",
-    "typescript": "^4.2.3"
+    "@remix-run/dev": "^1.0.5",
+    "@remix-run/serve": "^1.0.5",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.1.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "pre-push": "yarn test"
-    }
+  "engines": {
+    "node": ">=14"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  }
+  "sideEffects": false
 }
