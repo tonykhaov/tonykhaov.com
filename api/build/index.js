@@ -2,8 +2,22 @@ var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
 var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
 var __export = (target, all) => {
   __markAsModule(target);
@@ -211,153 +225,29 @@ function ErrorBoundary({ error }) {
   }, /* @__PURE__ */ React3.createElement(Layout_default, null, /* @__PURE__ */ React3.createElement("div", null, /* @__PURE__ */ React3.createElement("h1", null, "There was an error"), /* @__PURE__ */ React3.createElement("p", null, error.message), /* @__PURE__ */ React3.createElement("hr", null), /* @__PURE__ */ React3.createElement("p", null, "Hey, developer, you should replace this with what you want your users to see."))));
 }
 
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/demos/actions.tsx
-var actions_exports = {};
-__export(actions_exports, {
-  action: () => action,
-  default: () => ActionsDemo,
+// mdx:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/posts/first-post.md
+var first_post_exports = {};
+__export(first_post_exports, {
+  default: () => first_post_default,
+  filename: () => filename,
+  headers: () => headers,
+  links: () => links2,
   meta: () => meta
 });
 var import_react = __toModule(require("react"));
-var import_remix5 = __toModule(require("remix"));
-function meta() {
-  return { title: "Actions Demo" };
+function MDXContent(props = {}) {
+  const _components = Object.assign({
+    h1: "h1",
+    p: "p"
+  }, props.components), { wrapper: MDXLayout } = _components;
+  const _content = /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(_components.h1, null, "This is my very first post"), "\n", /* @__PURE__ */ import_react.default.createElement(_components.p, null, "Hello this is my very first post. I just want to give it a try."));
+  return MDXLayout ? /* @__PURE__ */ import_react.default.createElement(MDXLayout, __spreadValues({}, props), _content) : _content;
 }
-var action = async ({ request }) => {
-  let formData = await request.formData();
-  let answer = formData.get("answer");
-  if (typeof answer !== "string") {
-    return (0, import_remix5.json)("Come on, at least try!", { status: 400 });
-  }
-  if (answer !== "egg") {
-    return (0, import_remix5.json)(`Sorry, ${answer} is not right.`, { status: 400 });
-  }
-  return (0, import_remix5.redirect)("/demos/correct");
-};
-function ActionsDemo() {
-  let actionMessage = (0, import_remix5.useActionData)();
-  let answerRef = (0, import_react.useRef)(null);
-  (0, import_react.useEffect)(() => {
-    if (actionMessage && answerRef.current) {
-      answerRef.current.select();
-    }
-  }, [actionMessage]);
-  return /* @__PURE__ */ React.createElement("div", {
-    className: "remix__page"
-  }, /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement("h2", null, "Actions!"), /* @__PURE__ */ React.createElement("p", null, "This form submission will send a post request that we handle in our `action` export. Any route can export an action to handle data mutations."), /* @__PURE__ */ React.createElement(import_remix5.Form, {
-    method: "post",
-    className: "remix__form"
-  }, /* @__PURE__ */ React.createElement("h3", null, "Post an Action"), /* @__PURE__ */ React.createElement("p", null, /* @__PURE__ */ React.createElement("i", null, "What is more useful when it is broken?")), /* @__PURE__ */ React.createElement("label", null, /* @__PURE__ */ React.createElement("div", null, "Answer:"), /* @__PURE__ */ React.createElement("input", {
-    ref: answerRef,
-    name: "answer",
-    type: "text"
-  })), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("button", null, "Answer!")), actionMessage ? /* @__PURE__ */ React.createElement("p", null, /* @__PURE__ */ React.createElement("b", null, actionMessage)) : null)), /* @__PURE__ */ React.createElement("aside", null, /* @__PURE__ */ React.createElement("h3", null, "Additional Resources"), /* @__PURE__ */ React.createElement("ul", null, /* @__PURE__ */ React.createElement("li", null, "Guide:", " ", /* @__PURE__ */ React.createElement("a", {
-    href: "https://remix.run/guides/data-writes"
-  }, "Data Writes")), /* @__PURE__ */ React.createElement("li", null, "API:", " ", /* @__PURE__ */ React.createElement("a", {
-    href: "https://remix.run/api/conventions#action"
-  }, "Route Action Export")), /* @__PURE__ */ React.createElement("li", null, "API:", " ", /* @__PURE__ */ React.createElement("a", {
-    href: "https://remix.run/api/remix#useactiondata"
-  }, /* @__PURE__ */ React.createElement("code", null, "useActionData"))))));
-}
-
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/demos/correct.tsx
-var correct_exports = {};
-__export(correct_exports, {
-  default: () => NiceWork
-});
-function NiceWork() {
-  return /* @__PURE__ */ React.createElement("h1", null, "You got it right!");
-}
-
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/demos/params.tsx
-var params_exports = {};
-__export(params_exports, {
-  default: () => Boundaries,
-  meta: () => meta2
-});
-var import_remix6 = __toModule(require("remix"));
-function meta2() {
-  return { title: "Boundaries Demo" };
-}
-function Boundaries() {
-  return /* @__PURE__ */ React.createElement("div", {
-    className: "remix__page"
-  }, /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement(import_remix6.Outlet, null)), /* @__PURE__ */ React.createElement("aside", null, /* @__PURE__ */ React.createElement("h2", null, "Click these Links"), /* @__PURE__ */ React.createElement("ul", null, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement(import_remix6.Link, {
-    to: "."
-  }, "Start over")), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement(import_remix6.Link, {
-    to: "one"
-  }, "Param: ", /* @__PURE__ */ React.createElement("i", null, "one"))), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement(import_remix6.Link, {
-    to: "two"
-  }, "Param: ", /* @__PURE__ */ React.createElement("i", null, "two"))), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement(import_remix6.Link, {
-    to: "this-record-does-not-exist"
-  }, "This will be a 404")), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement(import_remix6.Link, {
-    to: "shh-its-a-secret"
-  }, "And this will be 401 Unauthorized")), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement(import_remix6.Link, {
-    to: "kaboom"
-  }, "This one will throw an error")))));
-}
-
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/demos/params/index.tsx
-var params_exports2 = {};
-__export(params_exports2, {
-  default: () => Boundaries2
-});
-function Boundaries2() {
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("h2", null, "Params"), /* @__PURE__ */ React.createElement("p", null, "When you name a route segment with $ like", " ", /* @__PURE__ */ React.createElement("code", null, "routes/users/$userId.js"), ", the $ segment will be parsed from the URL and sent to your loaders and actions by the same name."), /* @__PURE__ */ React.createElement("h2", null, "Errors"), /* @__PURE__ */ React.createElement("p", null, "When a route throws and error in it's action, loader, or component, Remix automatically catches it, won't even try to render the component, but it will render the route's ErrorBoundary instead. If the route doesn't have one, it will bubble up to the routes above it until it hits the root."), /* @__PURE__ */ React.createElement("p", null, "So be as granular as you want with your error handling."), /* @__PURE__ */ React.createElement("h2", null, "Not Found"), /* @__PURE__ */ React.createElement("p", null, "(and other", " ", /* @__PURE__ */ React.createElement("a", {
-    href: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses"
-  }, "client errors"), ")"), /* @__PURE__ */ React.createElement("p", null, "Loaders and Actions can throw a ", /* @__PURE__ */ React.createElement("code", null, "Response"), " instead of an error and Remix will render the CatchBoundary instead of the component. This is great when loading data from a database isn't found. As soon as you know you can't render the component normally, throw a 404 response and send your app into the catch boundary. Just like error boundaries, catch boundaries bubble, too."));
-}
-
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/demos/params/$id.tsx
-var id_exports = {};
-__export(id_exports, {
-  CatchBoundary: () => CatchBoundary2,
-  ErrorBoundary: () => ErrorBoundary2,
-  default: () => ParamDemo,
-  loader: () => loader,
-  meta: () => meta3
-});
-var import_remix7 = __toModule(require("remix"));
-var loader = async ({ params }) => {
-  if (params.id === "this-record-does-not-exist") {
-    throw new Response("Not Found", { status: 404 });
-  }
-  if (params.id === "shh-its-a-secret") {
-    throw (0, import_remix7.json)({ webmasterEmail: "hello@remix.run" }, { status: 401 });
-  }
-  if (params.id === "kaboom") {
-    lol();
-  }
-  return { param: params.id };
-};
-function ParamDemo() {
-  let data = (0, import_remix7.useLoaderData)();
-  return /* @__PURE__ */ React.createElement("h1", null, "The param is ", /* @__PURE__ */ React.createElement("i", {
-    style: { color: "red" }
-  }, data.param));
-}
-function CatchBoundary2() {
-  let caught = (0, import_remix7.useCatch)();
-  let message;
-  switch (caught.status) {
-    case 401:
-      message = /* @__PURE__ */ React.createElement("p", null, "Looks like you tried to visit a page that you do not have access to. Maybe ask the webmaster (", caught.data.webmasterEmail, ") for access.");
-    case 404:
-      message = /* @__PURE__ */ React.createElement("p", null, "Looks like you tried to visit a page that does not exist.");
-    default:
-      message = /* @__PURE__ */ React.createElement("p", null, "There was a problem with your request!", /* @__PURE__ */ React.createElement("br", null), caught.status, " ", caught.statusText);
-  }
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("h2", null, "Oops!"), /* @__PURE__ */ React.createElement("p", null, message), /* @__PURE__ */ React.createElement("p", null, "(Isn't it cool that the user gets to stay in context and try a different link in the parts of the UI that didn't blow up?)"));
-}
-function ErrorBoundary2({ error }) {
-  console.error(error);
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("h2", null, "Error!"), /* @__PURE__ */ React.createElement("p", null, error.message), /* @__PURE__ */ React.createElement("p", null, "(Isn't it cool that the user gets to stay in context and try a different link in the parts of the UI that didn't blow up?)"));
-}
-var meta3 = ({ data }) => {
-  return {
-    title: data ? `Param: ${data.param}` : "Oops..."
-  };
-};
+var first_post_default = MDXContent;
+var filename = "first-post.md";
+var headers = typeof attributes !== "undefined" && attributes.headers;
+var meta = typeof attributes !== "undefined" && attributes.meta;
+var links2 = void 0;
 
 // route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/cours/index.tsx
 var cours_exports = {};
@@ -369,89 +259,55 @@ function CoursIndex() {
 }
 var cours_default = CoursIndex;
 
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/demos/about.tsx
+// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/about.tsx
 var about_exports = {};
 __export(about_exports, {
-  default: () => Index,
-  links: () => links2,
-  meta: () => meta4
-});
-var import_remix8 = __toModule(require("remix"));
-
-// app/styles/demos/about.css
-var about_default = "/build/_assets/about-GGM5BPB3.css";
-
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/demos/about.tsx
-var meta4 = () => {
-  return {
-    title: "About Remix"
-  };
-};
-var links2 = () => {
-  return [{ rel: "stylesheet", href: about_default }];
-};
-function Index() {
-  return /* @__PURE__ */ React.createElement("div", {
-    className: "about"
-  }, /* @__PURE__ */ React.createElement("div", {
-    className: "about__intro"
-  }, /* @__PURE__ */ React.createElement("h2", null, "About Us"), /* @__PURE__ */ React.createElement("p", null, "Ok, so this page isn't really ", /* @__PURE__ */ React.createElement("em", null, "about us"), ", but we did want to show you a few more things Remix can do."), /* @__PURE__ */ React.createElement("p", null, "Did you notice that things look a little different on this page? The CSS that we import in the route file and include in its", " ", /* @__PURE__ */ React.createElement("code", null, "links"), " export is only included on this route and its children."), /* @__PURE__ */ React.createElement("p", null, "Wait a sec...", /* @__PURE__ */ React.createElement("em", null, "its children"), "? To understand what we mean by this,", " ", /* @__PURE__ */ React.createElement("a", {
-    href: "https://remix.run/tutorial/4-nested-routes-params"
-  }, "read all about nested routes in the docs"), "."), /* @__PURE__ */ React.createElement("hr", null), /* @__PURE__ */ React.createElement(import_remix8.Outlet, null)));
-}
-
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/demos/about/index.tsx
-var about_exports2 = {};
-__export(about_exports2, {
-  default: () => AboutIndex
-});
-var import_remix9 = __toModule(require("remix"));
-function AboutIndex() {
-  return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("p", null, "You are looking at the index route for the ", /* @__PURE__ */ React.createElement("code", null, "/about"), " URL segment, but there are nested routes as well!"), /* @__PURE__ */ React.createElement("p", null, /* @__PURE__ */ React.createElement("strong", null, /* @__PURE__ */ React.createElement(import_remix9.Link, {
-    to: "whoa"
-  }, "Check out one of them here."))));
-}
-
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/demos/about/whoa.tsx
-var whoa_exports = {};
-__export(whoa_exports, {
-  default: () => AboutIndex2
-});
-var import_remix10 = __toModule(require("remix"));
-function AboutIndex2() {
-  return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("p", null, "Whoa, this is a nested route! We render the ", /* @__PURE__ */ React.createElement("code", null, "/about"), " layout route component, and its ", /* @__PURE__ */ React.createElement("code", null, "Outlet"), " renders our route component. \u{1F92F}"), /* @__PURE__ */ React.createElement("p", null, /* @__PURE__ */ React.createElement("strong", null, /* @__PURE__ */ React.createElement(import_remix10.Link, {
-    to: ".."
-  }, "Go back to the ", /* @__PURE__ */ React.createElement("code", null, "/about"), " index."))));
-}
-
-// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/about.tsx
-var about_exports3 = {};
-__export(about_exports3, {
-  default: () => about_default2
+  default: () => about_default
 });
 function About() {
   return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", null, "About me \u{1F468}"), /* @__PURE__ */ React.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ab itaque deleniti similique omnis, blanditiis porro minus? Officia molestiae nihil earum aperiam doloremque exercitationem nobis? Dolorem magni ex alias atque quas, nesciunt officia laboriosam voluptate repellat modi quia placeat maxime ab voluptates, repellendus minus dicta veniam magnam, vitae voluptatibus doloremque asperiores sapiente dolorum dignissimos? Beatae, saepe harum. Ipsa, facere vel?"));
 }
-var about_default2 = About;
+var about_default = About;
 
 // route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/index.tsx
 var routes_exports = {};
 __export(routes_exports, {
-  default: () => Index2,
-  loader: () => loader2,
-  meta: () => meta5
+  default: () => Index,
+  loader: () => loader,
+  meta: () => meta2
 });
-var loader2 = () => {
-  return null;
+var import_remix5 = __toModule(require("remix"));
+
+// app/post.ts
+var import_path = __toModule(require("path"));
+var import_promises = __toModule(require("fs/promises"));
+async function getPosts() {
+  const postPath = import_path.default.join(__dirname, "..", "..", "app", "routes", "posts");
+  const posts = await import_promises.default.readdir(postPath);
+  const slugs = posts.map((post) => {
+    const [slug] = post.split(".");
+    return slug;
+  });
+  return slugs;
+}
+
+// route-module:/Users/tonykhaov/Downloads/tonykhaov.com/app/routes/index.tsx
+var loader = () => {
+  return getPosts();
 };
-var meta5 = () => {
+var meta2 = () => {
   return {
     title: "Homepage",
     description: "Welcome to my homepage!"
   };
 };
-function Index2() {
-  return /* @__PURE__ */ React.createElement("h1", null, "Hello");
+function Index() {
+  const posts = (0, import_remix5.useLoaderData)();
+  return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", null, "Recent blog posts"), /* @__PURE__ */ React.createElement("ul", null, posts.map((post) => /* @__PURE__ */ React.createElement("li", {
+    key: post
+  }, /* @__PURE__ */ React.createElement("h2", null, post), /* @__PURE__ */ React.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis quo accusamus unde. Fugit, aspernatur? Iste repellendus laborum nesciunt voluptatibus!"), /* @__PURE__ */ React.createElement(import_remix5.Link, {
+    to: `posts/${post}`
+  }, "Read more \u2192")))));
 }
 
 // <stdin>
@@ -466,45 +322,13 @@ var routes = {
     caseSensitive: void 0,
     module: root_exports
   },
-  "routes/demos/actions": {
-    id: "routes/demos/actions",
+  "routes/posts/first-post": {
+    id: "routes/posts/first-post",
     parentId: "root",
-    path: "demos/actions",
+    path: "posts/first-post",
     index: void 0,
     caseSensitive: void 0,
-    module: actions_exports
-  },
-  "routes/demos/correct": {
-    id: "routes/demos/correct",
-    parentId: "root",
-    path: "demos/correct",
-    index: void 0,
-    caseSensitive: void 0,
-    module: correct_exports
-  },
-  "routes/demos/params": {
-    id: "routes/demos/params",
-    parentId: "root",
-    path: "demos/params",
-    index: void 0,
-    caseSensitive: void 0,
-    module: params_exports
-  },
-  "routes/demos/params/index": {
-    id: "routes/demos/params/index",
-    parentId: "routes/demos/params",
-    path: void 0,
-    index: true,
-    caseSensitive: void 0,
-    module: params_exports2
-  },
-  "routes/demos/params/$id": {
-    id: "routes/demos/params/$id",
-    parentId: "routes/demos/params",
-    path: ":id",
-    index: void 0,
-    caseSensitive: void 0,
-    module: id_exports
+    module: first_post_exports
   },
   "routes/cours/index": {
     id: "routes/cours/index",
@@ -514,37 +338,13 @@ var routes = {
     caseSensitive: void 0,
     module: cours_exports
   },
-  "routes/demos/about": {
-    id: "routes/demos/about",
-    parentId: "root",
-    path: "demos/about",
-    index: void 0,
-    caseSensitive: void 0,
-    module: about_exports
-  },
-  "routes/demos/about/index": {
-    id: "routes/demos/about/index",
-    parentId: "routes/demos/about",
-    path: void 0,
-    index: true,
-    caseSensitive: void 0,
-    module: about_exports2
-  },
-  "routes/demos/about/whoa": {
-    id: "routes/demos/about/whoa",
-    parentId: "routes/demos/about",
-    path: "whoa",
-    index: void 0,
-    caseSensitive: void 0,
-    module: whoa_exports
-  },
   "routes/about": {
     id: "routes/about",
     parentId: "root",
     path: "about",
     index: void 0,
     caseSensitive: void 0,
-    module: about_exports3
+    module: about_exports
   },
   "routes/index": {
     id: "routes/index",
