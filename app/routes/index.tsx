@@ -1,22 +1,6 @@
-import { MetaFunction, LoaderFunction, useLoaderData, Link } from 'remix'
-import { Post } from '~/post'
-
-export const loader: LoaderFunction = () => {
-  return [
-    {
-      title: 'My Very First Post',
-      description: 'This is my very first post. I dunno what to say.',
-      slug: 'my-first-post',
-    },
-  ]
-}
-
-export const meta: MetaFunction = () => {
-  return {
-    title: 'Homepage',
-    description: 'Welcome to my homepage!',
-  }
-}
+import { useLoaderData, Link } from 'remix'
+import type { MetaFunction, LoaderFunction, HeadersFunction } from 'remix'
+import type { Post } from '~/post'
 
 export default function Index() {
   const posts = useLoaderData<Post[]>()
@@ -35,4 +19,27 @@ export default function Index() {
       </ul>
     </div>
   )
+}
+
+export const loader: LoaderFunction = () => {
+  return [
+    {
+      title: 'My Very First Post',
+      description: 'This is my very first post. I dunno what to say.',
+      slug: 'my-first-post',
+    },
+  ]
+}
+
+export const meta: MetaFunction = () => {
+  return {
+    title: 'Homepage',
+    description: 'Welcome to my homepage!',
+  }
+}
+
+export const headers: HeadersFunction = () => {
+  return {
+    'Cache-Control': 'max-age=300, s-maxage=3600',
+  }
 }
