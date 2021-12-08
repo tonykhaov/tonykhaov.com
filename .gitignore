@@ -4,6 +4,7 @@ node_modules
 /build
 /api/build
 /public/build
+/app/tailwind.css
 
 .DS_Store
 .vercel

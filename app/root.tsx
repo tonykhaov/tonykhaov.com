@@ -9,12 +9,12 @@ import {
   useCatch,
 } from 'remix'
 import type { LinksFunction } from 'remix'
+import styles from './tailwind.css'
 
-import temporaryStylesUrl from '~/styles/temporary.css'
 import { Layout, RouteChangeAnnouncement } from '~/components'
 
 export let links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: temporaryStylesUrl }]
+  return [{ rel: 'stylesheet', href: styles }]
 }
 
 export default function App() {
