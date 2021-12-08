@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Container, Title } from '~/components/ui'
 
 function SignesPage(): JSX.Element {
   const [value, setValue] = React.useState(0)
@@ -11,8 +12,8 @@ function SignesPage(): JSX.Element {
   const coldOpacity = (max - value) / (max - min)
 
   return (
-    <div className="max-w-5xl px-4 mx-auto my-8 lg:px-0">
-      <h1 className="mb-4 text-2xl underline">Les signes</h1>
+    <Container>
+      <Title>Les signes</Title>
       <div className="mb-8">
         <p>
           Pour comprendre les signes, il faut voir les nombres comme dans un
@@ -158,7 +159,7 @@ function SignesPage(): JSX.Element {
           </li>
         </ul>
       </div>
-    </div>
+    </Container>
   )
 }
 

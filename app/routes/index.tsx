@@ -1,6 +1,7 @@
-import { useLoaderData, Link } from 'remix'
+import { useLoaderData } from 'remix'
 import type { MetaFunction, LoaderFunction, HeadersFunction } from 'remix'
 import type { Post } from '~/post'
+import { TextLink } from '~/components/ui'
 
 export default function Index() {
   const posts = useLoaderData<Post[]>()
@@ -13,7 +14,7 @@ export default function Index() {
           <li key={post.slug}>
             <h2>{post.title}</h2>
             <p>{post.description}</p>
-            <Link to={`posts/${post.slug}`}>Read more →</Link>
+            <TextLink to={`posts/${post.slug}`}>Read more →</TextLink>
           </li>
         ))}
       </ul>

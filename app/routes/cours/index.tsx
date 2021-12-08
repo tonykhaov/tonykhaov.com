@@ -1,18 +1,26 @@
-import { Link } from 'remix'
+import { Container, List, TextLink, Title } from '~/components/ui'
 
 function CoursIndex() {
   return (
-    <>
-      <h1 className="text-xl">Cours</h1>
-      <ul className="ml-2">
-        <h2 className="text-lg underline">Maths</h2>
-        <li className="ml-2">
-          <Link to="signes" className="text-blue-700 hover:text-blue-500">
+    <Container>
+      <Title>Cours</Title>
+      <List>
+        <h2 className="text-lg">Maths</h2>
+        <li>
+          <TextLink to="signes" className="text-blue-700 hover:text-blue-500">
             Les signes (négatifs)
-          </Link>
+          </TextLink>
         </li>
-      </ul>
-    </>
+        <li>
+          <TextLink
+            to="ensembles"
+            className="text-blue-700 hover:text-blue-500"
+          >
+            Les ensembles de nombre (N), (Z), (D), (Q) et (R)
+          </TextLink>
+        </li>
+      </List>
+    </Container>
   )
 }
 
