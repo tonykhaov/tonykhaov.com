@@ -1,33 +1,36 @@
 import { useLoaderData } from 'remix'
 import type { MetaFunction, LoaderFunction, HeadersFunction } from 'remix'
 import type { Post } from '~/post'
-import { TextLink } from '~/components/ui'
+import { Container, List, TextLink, Title } from '~/components/ui'
 
 export default function Index() {
   const posts = useLoaderData<Post[]>()
 
   return (
-    <div>
-      <h1>Recent blog posts</h1>
-      <ul>
+    <Container>
+      <Title>Recent blog posts</Title>
+      <List>
         {posts.map((post) => (
           <li key={post.slug}>
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
+            <h2 className="text-xl">{post.title}</h2>
+            <p>
+              <i>{post.description}..</i>
+            </p>
             <TextLink to={`posts/${post.slug}`}>Read more →</TextLink>
           </li>
         ))}
-      </ul>
-    </div>
+      </List>
+    </Container>
   )
 }
 
 export const loader: LoaderFunction = () => {
   return [
     {
-      title: 'My Very First Post',
-      description: 'This is my very first post. I dunno what to say.',
-      slug: 'my-first-post',
+      title: 'But what is useCallback? And when should I use it?',
+      description:
+        "useCallback is a native hook in React used for memoizing functions. But you'll never use it unless you run into performance issues (usually when your function is inside a dependency array).",
+      slug: 'use-callback',
     },
   ]
 }
