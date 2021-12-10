@@ -7,7 +7,7 @@ function Container({
   return (
     <div
       {...props}
-      className={clsx('max-w-5xl px-4 mx-auto my-8 lg:px-0', className)}
+      className={clsx('max-w-5xl px-4 mx-auto my-4 lg:px-0', className)}
     />
   )
 }

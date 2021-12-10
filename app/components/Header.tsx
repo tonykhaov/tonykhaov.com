@@ -1,41 +1,37 @@
 import { Link } from 'remix'
+import { List } from './ui'
 
 function Header() {
   return (
-    <header>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <div style={{ display: 'flex' }}>
+    <header className="px-3 py-4">
+      <div className="flex justify-between">
+        <div className="flex gap-x-2">
           <Link to="/" title="Photo of Tony Khaov">
-            <div
-              style={{
-                width: '3rem',
-                height: '3rem',
-                borderRadius: '100%',
-                backgroundColor: 'green',
-              }}
-            />
+            <div className="w-12 h-12 bg-green-900 rounded-full" />
           </Link>
           <div>
-            <h1>
-              <Link to="/" title="Tony Khaov">
-                Tony Khaov
-              </Link>
-            </h1>
+            <h1>Tony Khaov</h1>
             <p>Front End Developer</p>
           </div>
         </div>
         <nav aria-label="Main navigation">
-          <ul style={{ display: 'flex' }}>
+          <List className="flex items-center h-full !list-none">
             <li>
-              <Link to="/">Home</Link>
+              <Link className="px-2 py-4" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/cours">Cours</Link>
+              <Link className="px-2 py-4" to="/cours">
+                Cours
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link className="px-2 py-4" to="/about">
+                About
+              </Link>
             </li>
-          </ul>
+          </List>
         </nav>
       </div>
     </header>

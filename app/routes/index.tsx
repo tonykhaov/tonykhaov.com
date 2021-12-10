@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <Container>
       <Title>Recent blog posts</Title>
-      <List>
+      <List className="!list-none">
         {posts.map((post) => (
           <li key={post.slug}>
             <h2 className="text-xl">{post.title}</h2>
