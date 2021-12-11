@@ -1,9 +1,8 @@
-import * as React from 'react'
-import { Container, Title } from '~/components/ui'
+import { Title } from '~/components/ui'
 
 function UseCallbackPost(): JSX.Element {
   return (
-    <Container>
+    <>
       <Title>But what is useCallback? And when should I use it?</Title>
       <div>
         <p>
@@ -159,7 +158,7 @@ function UseCallbackPost(): JSX.Element {
         access a variable from a certain lexical scope, so you can't declare
         your function somewhere else and pass 10 arguments... (in progress)
       </div>
-    </Container>
+    </>
   )
 }
 

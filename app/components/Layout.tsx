@@ -1,12 +1,11 @@
 import { Footer, Header } from '~/components'
+import { Container } from '~/components/ui'
 
 function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
     <div>
       <Header />
-      <div>
-        <div>{children}</div>
-      </div>
+      <Container>{children}</Container>
       <Footer />
     </div>
   )

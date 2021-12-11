@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Container, Title } from '~/components/ui'
+import { Title } from '~/components/ui'
 
 function SignesPage(): JSX.Element {
   const [value, setValue] = React.useState(0)
@@ -12,7 +12,7 @@ function SignesPage(): JSX.Element {
   const coldOpacity = (max - value) / (max - min)
 
   return (
-    <Container>
+    <>
       <Title>Les signes</Title>
       <div className="mb-8">
         <p>
@@ -159,7 +159,7 @@ function SignesPage(): JSX.Element {
           </li>
         </ul>
       </div>
-    </Container>
+    </>
   )
 }
 

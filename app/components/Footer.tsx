@@ -2,7 +2,7 @@ import { FaGithub, FaTwitter } from 'react-icons/fa'
 
 function Footer() {
   return (
-    <footer style={{ display: 'flex', justifyContent: 'center' }}>
+    <footer className="flex justify-center">
       <a
         title="Instagram"
         href="https://github.com/tonykhaov"

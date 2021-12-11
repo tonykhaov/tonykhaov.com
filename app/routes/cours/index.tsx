@@ -1,8 +1,8 @@
-import { Container, List, TextLink, Title } from '~/components/ui'
+import { List, TextLink, Title } from '~/components/ui'
 
 function CoursIndex() {
   return (
-    <Container>
+    <>
       <Title>Cours</Title>
       <List>
         <h2 className="text-lg">Maths</h2>
@@ -20,7 +20,7 @@ function CoursIndex() {
           </TextLink>
         </li>
       </List>
-    </Container>
+    </>
   )
 }
 

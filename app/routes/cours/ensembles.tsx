@@ -4,7 +4,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@reach/disclosure'
-import { Container, TextLink, List, Title } from '~/components/ui'
+import { TextLink, List, Title } from '~/components/ui'
 import { useInterval } from '~/utils/hooks'
 
 // TODO: finish drawing schema
@@ -47,7 +47,7 @@ function EnsemblesSchema() {
 export default function EnsemblesPage() {
   // TODO: create state for answers disclosure
   return (
-    <Container>
+    <>
       <Title>Les ensembles de nombre</Title>
       <EnsemblesSchema />
       <List>
@@ -179,7 +179,7 @@ export default function EnsemblesPage() {
         <h2>Exercice</h2>
         <EnsemblesExercise />
       </div>
-    </Container>
+    </>
   )
 }
 

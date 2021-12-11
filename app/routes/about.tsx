@@ -1,8 +1,8 @@
-import { Container, Title } from '~/components/ui'
+import { Title } from '~/components/ui'
 
 function About() {
   return (
-    <Container>
+    <>
       <Title>About me 👨</Title>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ab
@@ -13,7 +13,7 @@ function About() {
         veniam magnam, vitae voluptatibus doloremque asperiores sapiente dolorum
         dignissimos? Beatae, saepe harum. Ipsa, facere vel?
       </p>
-    </Container>
+    </>
   )
 }
 

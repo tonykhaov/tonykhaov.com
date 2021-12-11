@@ -1222,10 +1222,10 @@ d3-zoom@3:
     d3-selection "2 - 3"
     d3-transition "2 - 3"
 
-d3@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/d3/-/d3-7.2.0.tgz#5f2a738276e24ac523bd0921d161c9b3943dc912"
-  integrity sha512-0bh5lPzD6R/I/SjkcgyQlMaIsrZDgh40yMkdJaiZ/58YEbh4zz5EvtjaudzmI6ruwQNvxGm00trYUyPa992NSQ==
+d3@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/d3/-/d3-7.2.1.tgz#97eafaa6fc8cd7c564c3ace1e6678cbecf63f3ea"
+  integrity sha512-E/5sP0aeK6YPXI/+4QlefvBFgmcyR2jYftId0PrYWv4Y/gW3c3thp1XG4rQzF0eUwV9tR1x05X5eWuJ6rQXvew==
   dependencies:
     d3-array "3"
     d3-axis "3"
@@ -3502,10 +3502,10 @@ supports-color@^8.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-tailwindcss@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.0.tgz#f7dfd30996b3b1a84d656aaf3c8b6810b70d3d42"
-  integrity sha512-UPAp2PS5vojAvGClJFIkdh2hfFyaSWo09Ma9j2vZYW+ANhTvpUHFjY85JgtrvvXXREtDvOXy2BxW1yHOz8apCg==
+tailwindcss@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.1.tgz#bef72ff45d5cfed79bb648d30da952e521e98da4"
+  integrity sha512-EVDXVZkcueZ77/zfOJw7XkzCuxe5TCiT/S9pw9P183oRzSuwMZ7WO+W/L76jbJQA5qxGeUBJOVOLVBuAUfeZ3g==
   dependencies:
     arg "^5.0.1"
     chalk "^4.1.2"

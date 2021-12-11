@@ -12,6 +12,7 @@ import type { LinksFunction } from 'remix'
 import styles from './tailwind.css'
 
 import { Layout, RouteChangeAnnouncement } from '~/components'
+import { Title, TextLink } from '~/components/ui'
 
 export let links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: styles }]
@@ -80,10 +81,13 @@ export function CatchBoundary() {
   return (
     <Document title={`${caught.status} ${caught.statusText}`}>
       <Layout>
-        <h1>
+        <Title>
           {caught.status}: {caught.statusText}
-        </h1>
+        </Title>
         {message}
+        <TextLink to="/">
+          Maybe you want to go back to the homepage? :)
+        </TextLink>
       </Layout>
     </Document>
   )
@@ -94,15 +98,8 @@ export function ErrorBoundary({ error }: { error: Error }) {
   return (
     <Document title="Error!">
       <Layout>
-        <div>
-          <h1>There was an error</h1>
-          <p>{error.message}</p>
-          <hr />
-          <p>
-            Hey, developer, you should replace this with what you want your
-            users to see.
-          </p>
-        </div>
+        <Title>There was an error</Title>
+        <p>{error.message}</p>
       </Layout>
     </Document>
   )

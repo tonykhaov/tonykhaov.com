@@ -1,13 +1,13 @@
 import { useLoaderData } from 'remix'
 import type { MetaFunction, LoaderFunction, HeadersFunction } from 'remix'
 import type { Post } from '~/post'
-import { Container, List, TextLink, Title } from '~/components/ui'
+import { List, TextLink, Title } from '~/components/ui'
 
 export default function Index() {
   const posts = useLoaderData<Post[]>()
 
   return (
-    <Container>
+    <>
       <Title>Recent blog posts</Title>
       <List className="!list-none">
         {posts.map((post) => (
@@ -20,7 +20,7 @@ export default function Index() {
           </li>
         ))}
       </List>
-    </Container>
+    </>
   )
 }
 
