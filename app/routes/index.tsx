@@ -8,18 +8,27 @@ export default function Index() {
 
   return (
     <>
-      <Title>Recent blog posts</Title>
-      <List className="!list-none">
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <h2 className="text-xl">{post.title}</h2>
-            <p>
-              <i>{post.description}..</i>
-            </p>
-            <TextLink to={`posts/${post.slug}`}>Read more →</TextLink>
-          </li>
-        ))}
-      </List>
+      <div>
+        <Title className="!text-xl">Recent blog posts</Title>
+        <List className="!list-none">
+          {posts.map((post) => (
+            <li key={post.slug}>
+              <h2 className="text-xl">{post.title}</h2>
+              <p>
+                <i>{post.description}..</i>
+              </p>
+              <TextLink to={`posts/${post.slug}`}>Read more →</TextLink>
+            </li>
+          ))}
+        </List>
+      </div>
+      <div className="mt-8">
+        <Title className="!text-xl !mb-0">
+          I also write lessons for middle school students. (they are written in
+          French)
+        </Title>
+        <TextLink to="/cours">Browse lessons →</TextLink>
+      </div>
     </>
   )
 }
