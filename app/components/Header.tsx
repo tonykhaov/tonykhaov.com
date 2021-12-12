@@ -1,35 +1,30 @@
 import { Link } from 'remix'
-import { List } from './ui'
+import { List } from '~/components/ui'
+import me from '~/image/me.jpg'
 
 function Header() {
   return (
-    <header className="px-3 py-4">
+    <header className="px-2 pt-3 pb-2 mx-auto border-b max-w-7xl xl:px-0">
       <div className="flex justify-between">
-        <div className="flex gap-x-2">
+        <div className="flex items-center gap-x-2 flex-nowrap">
           <Link to="/" title="Photo of Tony Khaov">
-            <div className="w-12 h-12 bg-green-900 rounded-full" />
+            <img className="w-12 h-12 rounded-full" src={me} />
           </Link>
           <div>
             <h1>Tony Khaov</h1>
-            <p>Front End Developer</p>
+            <p className="text-sm text-gray-600">Web Developer</p>
           </div>
         </div>
         <nav aria-label="Main navigation">
-          <List className="flex items-center h-full !list-none">
+          <List className="flex items-center gap-2 h-full !list-none">
             <li>
-              <Link className="px-2 py-4" to="/">
-                Home
-              </Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link className="px-2 py-4" to="/cours">
-                Cours
-              </Link>
+              <Link to="/cours">Cours</Link>
             </li>
             <li>
-              <Link className="px-2 py-4" to="/about">
-                About
-              </Link>
+              <Link to="/about">About</Link>
             </li>
           </List>
         </nav>
