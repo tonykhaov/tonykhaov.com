@@ -4,7 +4,7 @@ import type { Post } from '~/post'
 import { List, TextLink, Title } from '~/components/ui'
 
 export default function Index() {
-  const posts = useLoaderData<Post[]>()
+  // const posts = useLoaderData<Post[]>()
 
   return (
     <>
@@ -33,16 +33,18 @@ export default function Index() {
   )
 }
 
-export const loader: LoaderFunction = () => {
-  return [
-    {
-      title: 'But what is useCallback? And when should I use it?',
-      description:
-        "useCallback is a native hook in React used for memoizing functions. But you'll never use it unless you run into performance issues (usually when your function is inside a dependency array).",
-      slug: 'use-callback',
-    },
-  ]
-}
+const posts = [
+  {
+    title: 'But what is useCallback? And when should I use it?',
+    description:
+      "useCallback is a native hook in React used for memoizing functions. But you'll never use it unless you run into performance issues (usually when your function is inside a dependency array).",
+    slug: 'use-callback',
+  },
+]
+
+// export const loader: LoaderFunction = () => {
+//   return posts
+// }
 
 export const meta: MetaFunction = () => {
   return {
