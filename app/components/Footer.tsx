@@ -1,15 +1,15 @@
-import { FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 function Footer() {
   return (
-    <footer className="flex justify-center">
+    <footer className="flex justify-center gap-x-4">
       <a
         title="Instagram"
         href="https://github.com/tonykhaov"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaGithub />
+        <FaGithub size={18} />
       </a>
       <a
         title="Twitter"
@@ -17,7 +17,15 @@ function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaTwitter />
+        <FaTwitter size={18} />
+      </a>
+      <a
+        title="Linkedin"
+        href="https://www.linkedin.com/in/tonykhaov"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedin size={18} />
       </a>
     </footer>
   )
