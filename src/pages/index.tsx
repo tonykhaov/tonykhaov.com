@@ -1,5 +1,5 @@
 function Home() {
-  return null
+  return <h1>Tony Khaov</h1>
 }
 
 export default Home

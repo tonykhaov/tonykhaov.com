@@ -18,7 +18,8 @@ function customRender(
   options?: CustomRenderOptions,
 ): CustomRenderResult {
   const renderResult = rtlRender(ui, {
-    wrapper: AppProviders,
+    // set this wrapper when I need to wrap my app with providers
+    // wrapper: AppProviders,
     ...options?.render,
   })
   return {
